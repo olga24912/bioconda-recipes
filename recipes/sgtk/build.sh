@@ -3,11 +3,11 @@
 set -e
 
 if [ "x$PREFIX" = "x" ]; then
-  PREFIX=`pwd`
+  PREFIX=`.`
 fi
 
 BUILD_DIR=build
-BASEDIR=`pwd`/`dirname $0`
+BASEDIR=`.`/`dirname $0`
 
 rm -rf "$BASEDIR/$BUILD_DIR"
 mkdir -p "$BASEDIR/$BUILD_DIR"

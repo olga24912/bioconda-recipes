@@ -15,9 +15,20 @@ requirement:
     build:
         - {{ compiler('c') }}
     host:
+        - python
+        - biopython
         - zlib
+        - seqan-library
+        - minimap2
+        - star
     run:
+        - python
+        - biopython
+        - libgcc
         - zlib
+        - seqan-library
+        - minimap2
+        - star
 
 about: 
     home: https://github.com/olga24912/SGTK
