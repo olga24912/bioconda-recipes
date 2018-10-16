@@ -1,0 +1,29 @@
+{% set version = "1.0.1" %}
+
+package: 
+    name: sgtk
+    version: {{ version }}
+
+build: 
+    number: 0
+
+source:
+    url: https://github.com/olga24912/SGTK/archive/v{{ version }}.zip
+    sha256: 41bcc59c5ac52108f4d43ef2aa3e843a061399f4ddcf3b25d507334fe955b484
+
+requirement:
+    build:
+        - {{ compiler('c') }}
+    host:
+        - zlib
+    run:
+        - zlib
+
+about: 
+    home: https://github.com/olga24912/SGTK
+    license: GPL2
+    summary: SGTK -- Scaffold Graph ToolKit -- is a tool for construction and interactive visualization of scaffold graph.
+
+test:
+    commands:
+        - visualize_scaffold_graph.py --help
